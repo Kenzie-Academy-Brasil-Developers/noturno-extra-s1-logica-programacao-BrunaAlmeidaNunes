@@ -9,16 +9,17 @@ funcao salario fixo e vendas
 calcular salario con comissão
 */
 function calculateSalary(salario, vendas) {
-	let soma = 0;
 
 	if (vendas <= 1200) {
 		let comissao = 3 / 100 * vendas
 		soma = salario + comissao;
+		return 'com comissão de 3% seu salario é ' + soma
 	} else {
 		let comissao = 5 / 100 * vendas
 		soma = salario + comissao;
+		return 'Com comissão de 5% seu salario é ' + soma
 	}
-	return soma
+	
 }
 console.log(calculateSalary(1500, 3000))
 
@@ -36,7 +37,7 @@ function calculateStock(qntdAtual, qtndMax, qntdMin) {
 	} else {
 		return 'Efetuar compra'
 	}
-	return media
+
 }
 console.log(calculateStock(3000))
 
@@ -52,7 +53,7 @@ function calculateAge(dataNasc, anoAtual) {
 	let meses = anos * 12;
 	let dias = meses * 30;
 	let semanas = dias / 7;
-	return anos + ' '+ meses +' '+ dias +' '+ semanas +' '
+	return 'Voce tem ' + anos + ' anos,  '+ meses +' meses, '+ dias +' dias, e '+ semanas +' semanas.';
 }
 console.log(calculateAge(1993, 2021))
 
